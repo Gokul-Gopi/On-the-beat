@@ -1,0 +1,67 @@
+.landing-page{
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgb(124, 58, 237), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1567401747741-cd21b3b251f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.landing-page-container{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left: 50%;
+    color: white;
+}
+
+.landing-page-container button{
+    height: 3.4rem;
+    width: 8rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.front-banner h1{
+    font-size: 7rem;
+}
+
+.tagline{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.browse-btn-container{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.browse-btn-container button{
+    border: 3px solid var(--primary-color);
+    background: transparent;
+    height: 3.4rem;
+    width: 8rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.browse-btn-container button:hover{
+    transform: scale(1.1);
+}
+
+.login-sign-btns-container{
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.login-sign-btns-container button{
+    background-color: var(--primary-color);
+    color: white;
+    height: 3rem;
+    margin: 10px;
+}

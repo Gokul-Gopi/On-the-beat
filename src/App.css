@@ -1,38 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&display=swap');
+
+:root{
+  --primary-color:#7C3AED;
+   /* --primary-color:#2563EB;  */
+   /* --primary-color:#FCD34D; */
+
+}
+
 .App {
-  text-align: center;
+  font-family: 'Baloo Chettan 2', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html{
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
+body{
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white-100);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
