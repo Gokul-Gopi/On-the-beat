@@ -1,0 +1,8 @@
+.stacked-list{
+    display: flex;
+    align-items: center;
+}
+
+.stacked-list .list-of-videos{
+    align-self: flex-start;
+}

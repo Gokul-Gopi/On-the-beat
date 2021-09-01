@@ -1,5 +1,5 @@
 import React from 'react'
-import '../pages/LandingPage.css'
+import '../LandingPage/LandingPage.css'
 import { GiGuitarBassHead } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 
@@ -17,8 +17,13 @@ const LandingPage = () => {
                 </Link>
 
                 <div className='login-sign-btns-container'>
-                    <button className='login-btn'>Login</button>
-                    <button className='signup-btn'>Sign up</button>
+                    <Link to='/login'>
+                        <button className='login-btn'>Login</button>
+                    </Link>
+
+                    <Link to='/signup'>
+                        <button className='signup-btn'>Sign up</button>
+                    </Link>
                 </div>
             </div>
         </div>

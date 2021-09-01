@@ -1,0 +1,35 @@
+.sidebar{
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid rgb(189, 189, 189);
+    width: 5%;
+    height: 100vh;
+    padding: 0 1rem;
+}
+
+.sidebar-container{
+   position: sticky;
+   top: 30%;
+}
+
+.sidebar-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.sidebar-link span{
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.sidebar-link .icon{
+    transform: scale(2);
+    color: var(--primary-color);
+}
+
+.sidebar-link .icon:hover{
+    transform: scale(1.8);
+}

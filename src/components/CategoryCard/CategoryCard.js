@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/CategoryCard.css'
+import '../CategoryCard/CategoryCard.css'
 
 const CategoryCard = (props) => {
     return (
@@ -7,7 +7,7 @@ const CategoryCard = (props) => {
             <div className='category-image-box'>
                 <img src={props.image} alt="Category" />
             </div>
-            <div className='category-title'><span>{props.title}</span></div>
+            <div className='category-title'><span>{props.title.toUpperCase()}</span></div>
         </div>
     )
 }

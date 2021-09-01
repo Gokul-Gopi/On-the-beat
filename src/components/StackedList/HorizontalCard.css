@@ -1,0 +1,45 @@
+.horizontal-card{
+    display: flex;
+    width: 100%;
+    margin: 1.2rem;
+}
+
+.video-thumbnail{
+    height:220px;
+}
+
+.video-thumbnail img{
+    height: 220px;
+}
+
+.video-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.video-info .info{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.video-info span{
+    font-size: 1.1rem;
+}
+
+.video-info .title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.video-info .remove-video-btn {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    align-self: flex-start;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -47,7 +47,8 @@
     font-size: 1.3rem;
     border-radius: 5px;
     color: white;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
 .browse-btn-container button:hover{
@@ -64,4 +65,10 @@
     color: white;
     height: 3rem;
     margin: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.login-sign-btns-container button:hover{
+    transform: scale(1.1);
 }

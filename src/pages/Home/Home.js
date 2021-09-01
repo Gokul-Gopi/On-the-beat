@@ -1,5 +1,7 @@
 import React from 'react'
-import '../pages/Home'
+import Navbar from '../../components/Header/Header'
+import Sidebar from '../../components/Navbar/Navbar'
+import '../Home/Home.css'
 
 const Home = () => {
     return (

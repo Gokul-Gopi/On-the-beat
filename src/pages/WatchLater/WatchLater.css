@@ -1,0 +1,15 @@
+.watch-later{
+    display: flex;
+}
+
+.watch-later-container{
+    padding: 0 1rem;
+}
+
+.watch-later-container h2{
+    font-weight: normal;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

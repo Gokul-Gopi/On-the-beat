@@ -1,0 +1,26 @@
+.library{
+    display: flex;
+    height: 100vh;
+}
+
+.library h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.library-grid{
+    width: 100%;
+}
+
+.library-container{
+    width: 100%;
+}
+
+.library-grid-container{
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1.5rem;
+}

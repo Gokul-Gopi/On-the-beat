@@ -1,0 +1,194 @@
+.videoplaying{
+    display: flex;
+    padding: 2rem 4rem;
+}
+
+.video-player-container{
+    /* border: 5px solid black; */
+    width: 66%;
+}
+
+/* .channel-details{
+    border: 1px solid black;
+} */
+
+.channel-details .title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.other-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #6B7280;
+    margin-bottom: 1rem;
+    /* border: 1px solid black; */
+}
+
+.other-details .views-date{
+    align-self: flex-end;
+}
+
+.other-details .views-date span{
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.other-details .options button{
+   font-size: 1.9rem; 
+   margin-right: 10px;
+   cursor: pointer;
+   border: none;
+   background: transparent;
+   color: #6B7280;
+}
+
+.channel-img{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.channel-details .img-desc{
+    border-top: 1px solid #6B7280;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.channel-img img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--primary-color);
+    padding: 0.1rem;
+    margin-right: 10px;
+}
+
+.channel-img span{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.channel-details .description-btn{
+    padding: 0.4rem 0.4rem;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.description-btn::after{
+    content: '\25be';
+    float: right;
+    transform: scale(1.4);
+}
+
+.description-btn--active::after{
+    content: '\25b4';
+}
+
+.channel-description{
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s;
+}
+
+.channel-details .channel-description{
+    margin-top: 20px;
+}
+
+.note-taking-container{
+    padding: 1rem 1.2rem;
+    box-shadow: -1px -1px 9px rgba(0, 0, 0, 0.3);
+    height: 700px;
+    width: 34%;
+    margin-left: 2rem;
+}
+
+.note-taking-container h2{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.note-taking-container .text-input{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.note-taking-container .text-input input{
+    width: 100%;
+    height: 40px;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.note-taking-container .text-input .icon{
+    font-size: 2.5rem;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.allNotes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.allNotes::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.allNotes::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+.allNotes::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 10px;
+}
+  
+/* .allNotes::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color); 
+} */
+
+.notes-info{
+    padding: 1rem;
+    border-radius: 7px;
+    background-color: #FFFBEB;
+    margin: 10px 0px;
+}
+
+.notes-info p{
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+.notes-info .notes-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes-info span{
+    color: #6B7280;
+}
+
+.notes-info .btns button{
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+

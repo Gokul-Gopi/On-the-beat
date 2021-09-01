@@ -1,16 +1,71 @@
 import './App.css';
-import LandingPage from './pages/LandingPage';
+import { useEffect } from "react";
+import LandingPage from './pages/LandingPage/LandingPage';
 import { Routes, Route } from 'react-router-dom';
-import Category from './pages/Category';
-import Home from './pages/Home';
+import Category from './pages/Category/Category';
+import Home from './pages/Home/Home';
+import SignUp from './pages/SignUp/SignUp'
+import Navbar from "./components/Header/Header";
+import Sidebar from './components/Navbar/Navbar';
+import { useMatch } from "react-router-dom";
+import { displayNavbarAndSidebar } from './utils/components';
+import VideoListing from './pages/VideoListing/VideoListing';
+import { defaultHeaderForToken, networkCall } from './utils/networkCall'
+import { useVideo } from './context/VideoContext';
+import Login from './pages/Login/Login';
+import VideoPlaying from './pages/VideoPlaying/VideoPlaying';
+import { useAuth } from './context/AuthContext';
+import { usePlaylist } from './context/PlaylistContext';
+import Library from './pages/Library/Library';
+import WatchLater from './pages/WatchLater/WatchLater';
+import StackedList from './components/StackedList/StackedList';
 
 function App() {
+  const { authState } = useAuth()
+  const { state, dispatch } = useVideo()
+  const { playlistState, playlistDispatch } = usePlaylist()
+  const landingPageURL = useMatch('/');
+  const categoryPageURL = useMatch('/category');
+  defaultHeaderForToken(authState.currentUserToken)
+
+  // console.log(playlistState)
+
+  useEffect(() => {
+    if (authState.isLoggedIn) {
+      getNotes() && getPlaylist()
+    }
+  }, [authState.currentUserToken])
+
+  const getPlaylist = async () => {
+    const response = await networkCall('/playlist', "GET")
+    if (response.status === 200) {
+      playlistDispatch({ type: 'SET_LIBRARY', payload: response.data.playlists })
+    }
+  }
+
+  const getNotes = async () => {
+    const response = await networkCall(`/notes`, "GET")
+    if (response.status === 200) {
+      dispatch({ type: 'SET_NOTES', payload: response.data.notes })
+    }
+  }
+
   return (
     <div className="App">
+
+      {displayNavbarAndSidebar(landingPageURL, categoryPageURL) && <Navbar />}
+
       <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='category' element={<Category />} />
+        <Route path='watchlater' element={<WatchLater />} />
+        <Route path='library/:playlistID' element={<StackedList />} />
+        <Route path='library' element={<Library />} />
+        <Route path='videos/:id' element={<VideoPlaying />} />
+        <Route path='videos' element={<VideoListing />} />
+        <Route path='signup' element={<SignUp />} />
+        <Route path='login' element={<Login />} />
         <Route path='home' element={<Home />} />
+        <Route path='category' element={<Category />} />
+        <Route path='/' element={<LandingPage />} />
       </Routes>
 
     </div>

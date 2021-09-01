@@ -1,0 +1,43 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.login-container{
+    border: 2px solid var(--primary-color);
+    padding: 1rem;
+}
+
+.login-container .heading{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.login-container input{
+    height: 45px;
+    width: 400px;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.login-inputs{
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+}
+
+.login-inputs input{
+    border: none;
+}
+
+.login-inputs input:focus{
+    outline: none;
+}
+
+.login-inputs .icon{
+    font-size: 1.4rem;
+}
