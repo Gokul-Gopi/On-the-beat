@@ -42,10 +42,12 @@ const PlaylistCard = ({ playlist }) => {
                 </div>
             </div>
 
-            <div className="playlist-btns">
+            <div className="playlist-options">
                 <span className='playlist-name'>{playlist.name}</span>
-                <button onClick={(e) => editPlaylistName(e, playlist._id)}><AiOutlineEdit /></button>
-                <button onClick={(e) => deletePlaylist(e, playlist._id,)}><RiDeleteBin4Line /></button>
+                <div className='btns'>
+                    <button onClick={(e) => editPlaylistName(e, playlist._id)}><AiOutlineEdit /></button>
+                    <button onClick={(e) => deletePlaylist(e, playlist._id,)}><RiDeleteBin4Line /></button>
+                </div>
             </div>
         </div>
     )

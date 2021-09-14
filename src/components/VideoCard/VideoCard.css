@@ -31,7 +31,7 @@
 .video-card-container .primary-details{
     display: flex;
     align-items: center;
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem 0.3rem;
 }
 
 .video-card-container .primary-details img{

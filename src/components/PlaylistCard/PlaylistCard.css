@@ -67,22 +67,26 @@
    
 }
 
-.playlist-card .playlist-btns{
+.playlist-card .playlist-options{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    /* border: 1px solid black; */
     width: 100%;
+    margin-top: 0.5rem;
 }
 
-.playlist-card .playlist-btns span{
-    align-self: flex-end;
+.playlist-card .playlist-options span{
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.playlist-card .playlist-btns button{
+.playlist-card .playlist-options .btns{
+    align-self: flex-end;
+}
+
+.playlist-card .playlist-options .btns button{
     background: transparent;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    margin-right: 10px;
 }
