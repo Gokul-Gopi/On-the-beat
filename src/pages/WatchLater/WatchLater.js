@@ -11,7 +11,6 @@ const WatchLater = () => {
     const getWatchLater = () => {
         const playlist = playlistState.library.find(playlist => playlist.name === 'Watch Later')
         return { _id: playlist._id, videos: playlist.videos }
-
     }
 
     return (

@@ -19,6 +19,7 @@ import { usePlaylist } from './context/PlaylistContext';
 import Library from './pages/Library/Library';
 import WatchLater from './pages/WatchLater/WatchLater';
 import StackedList from './components/StackedList/StackedList';
+import PrivateRoutes from './components/PrivateRoutes';
 
 function App() {
   const { authState } = useAuth()
@@ -56,9 +57,9 @@ function App() {
       {displayNavbarAndSidebar(landingPageURL, categoryPageURL) && <Navbar />}
 
       <Routes>
-        <Route path='watchlater' element={<WatchLater />} />
-        <Route path='library/:playlistID' element={<StackedList />} />
-        <Route path='library' element={<Library />} />
+        <PrivateRoutes path='watchlater' element={<WatchLater />} />
+        <PrivateRoutes path='library/:playlistID' element={<StackedList />} />
+        <PrivateRoutes path='library' element={<Library />} />
         <Route path='videos/:id' element={<VideoPlaying />} />
         <Route path='videos' element={<VideoListing />} />
         <Route path='signup' element={<SignUp />} />
