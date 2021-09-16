@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import '../SignUp/SignUp.css'
 import Navbar from '../../components/Header/Header'
 import { useAuth } from '../../context/AuthContext'
-import { useNavigate } from 'react-router'
+import { useNavigate, Link } from 'react-router-dom'
+import { FaRegUserCircle } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
+import { RiLockPasswordLine } from 'react-icons/ri'
 
 const SignUp = () => {
 
@@ -76,35 +79,38 @@ const SignUp = () => {
             <div className="signup-container">
                 <form>
                     <div className='form-inputs'>
-                        <label htmlFor="firstname">Firstname</label>
-                        <input type="text" value={userDetails.firstName} onChange={(e) => setuserDetails(preValue => ({ ...preValue, firstName: e.target.value }))} />
+                        <FaRegUserCircle />
+                        <input type="text" value={userDetails.firstName} placeholder='Firstname' onChange={(e) => setuserDetails(preValue => ({ ...preValue, firstName: e.target.value }))} />
                     </div>
 
                     <div className='form-inputs'>
-                        <label htmlFor="lastname">Lastname</label>
-                        <input type="text" placeholder='Optional' value={userDetails.lastName} onChange={(e) => setuserDetails(preValue => ({ ...preValue, lastName: e.target.value }))} />
+                        <FaRegUserCircle />
+                        <input type="text" placeholder='Optional' value={userDetails.lastName} placeholder='Lastname' onChange={(e) => setuserDetails(preValue => ({ ...preValue, lastName: e.target.value }))} />
                     </div>
 
                     <div className='form-inputs'>
-                        <label htmlFor="e-mail">E-mail</label>
-                        <input type="mail" value={userDetails.eMail} onChange={(e) => setuserDetails(preValue => ({ ...preValue, eMail: e.target.value }))} />
+                        <FiMail />
+                        <input type="mail" value={userDetails.eMail} placeholder='e-Mail' onChange={(e) => setuserDetails(preValue => ({ ...preValue, eMail: e.target.value }))} />
                         <span className='error'>{formErrors.eMail}</span>
                     </div>
 
                     <div className='form-inputs'>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" value={userDetails.pwd} onChange={(e) => setuserDetails(preValue => ({ ...preValue, pwd: e.target.value }))} />
+                        <RiLockPasswordLine />
+                        <input type="password" value={userDetails.pwd} placeholder='Password' onChange={(e) => setuserDetails(preValue => ({ ...preValue, pwd: e.target.value }))} />
                         <span className='error'>{formErrors.pwd}</span>
                     </div>
 
                     <div className='form-inputs'>
-                        <label htmlFor="confirm-password">Confirm password</label>
-                        <input type="password" value={userDetails.confirmPwd} onChange={(e) => setuserDetails(preValue => ({ ...preValue, confirmPwd: e.target.value }))} />
+                        <RiLockPasswordLine />
+                        <input type="password" value={userDetails.confirmPwd} placeholder='Confirm Password' onChange={(e) => setuserDetails(preValue => ({ ...preValue, confirmPwd: e.target.value }))} />
                         <span className='error'>{formErrors.confirmPwd}</span>
                     </div>
 
-                    <div className='form-inputs'>
+                    <div className='sign-up-btn'>
                         <button onClick={(e) => signUpUser(e)}>Sign Up</button>
+                        <span>Already have an account?
+                            <Link to='/login'><strong> Login</strong></Link>
+                        </span>
                     </div>
                 </form>
             </div>

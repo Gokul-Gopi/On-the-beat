@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import '../Login/Login.css'
-import { FiMail } from 'react-icons/fi'
 import { AiOutlineEye } from 'react-icons/ai'
 import { Link } from "react-router-dom"
 import { useAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import { FiMail } from 'react-icons/fi'
+import { RiLockPasswordLine } from 'react-icons/ri'
 
 const Login = () => {
     const navigate = useNavigate()
@@ -40,7 +41,7 @@ const Login = () => {
                 </div>
 
                 <div className='login-inputs'>
-                    <AiOutlineEye className='icon password-icon' />
+                    <RiLockPasswordLine className='icon password-icon' />
                     <input type="text" placeholder='password' value={userCredentials.password} onChange={(e) => {
                         setUserCredentials(prevalue => ({ ...prevalue, password: e.target.value }))
                     }} />

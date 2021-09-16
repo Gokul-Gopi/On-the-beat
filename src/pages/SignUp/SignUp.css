@@ -1,14 +1,16 @@
 .signup{
-    display: inline-block;
-    border: 5px solid black;
-    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 84vh;
 }
 
 .signup-container{
     display: inline-block;
-    border: 2px solid var(--primary-color);
+    box-shadow: 1px 1px 3px rgba(124, 58, 237, 0.61);
     border-radius: 5px;
-    padding: 1.2rem;
+    padding: 1.4rem;
 }
 
 .signup-container .error{
@@ -17,10 +19,12 @@
 
 .signup-container .form-inputs{
     display: flex;
-    flex-direction: column;
+    align-items: center;
     font-size: 1.2rem;
     margin-bottom: 1rem;
     border-radius: 5px;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 0 0.5rem;
 }
 
 .signup-container div{
@@ -32,8 +36,30 @@
     width: 500px;
     font-size: 1.2rem;
     padding: 0.7rem;
+    border: none;
 }
 
-.form-inputs label{
-    margin-bottom: 10px;
+.form-inputs input:focus{
+    outline: none;
+}
+
+.signup-container .sign-up-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-container .sign-up-btn button{
+    width: 40%;
+    border-radius: 5px;
+    height: 2.3rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+}
+
+.signup-container .sign-up-btn span{
+    margin-top: 0.7rem;
 }
