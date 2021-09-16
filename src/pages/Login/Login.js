@@ -46,12 +46,16 @@ const Login = () => {
                     }} />
                 </div>
 
-                <div>
+                <div className='login-btn'>
                     <button onClick={() => loginUser()}>Login</button>
                 </div>
 
-                <div>
-                    <span>Don't have an account? <Link to='/signup'>Sign Up</Link> </span>
+                <div className='signup-link'>
+                    <span>Don't have an account?
+                        <Link to='/signup'>
+                            <strong> Sign Up</strong>
+                        </Link>
+                    </span>
                 </div>
             </div>
         </div>

@@ -6,8 +6,9 @@
 }
 
 .login-container{
-    border: 2px solid var(--primary-color);
-    padding: 1rem;
+    box-shadow: 1px 1px 3px rgba(124, 58, 237, 0.61);
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
 }
 
 .login-container .heading{
@@ -27,7 +28,10 @@
 .login-inputs{
     display: flex;
     align-items: center;
-    border: 1px solid grey;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
 }
 
 .login-inputs input{
@@ -41,3 +45,27 @@
 .login-inputs .icon{
     font-size: 1.4rem;
 }
+
+.login-container .login-btn{
+    text-align: center;
+}
+
+.login-container .login-btn button{
+    width: 40%;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.login-container .signup-link{
+    text-align: center;
+}
+
+/* .login-container .signup-link span{
+    font-weight: bolder;
+} */
