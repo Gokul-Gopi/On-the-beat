@@ -1,12 +1,11 @@
 import React from 'react'
 import Sidebar from '../../components/Navbar/Navbar'
-import PlaylistCard from '../../components/PlaylistCard/PlaylistCard'
 import HorizontalCard from '../../components/StackedList/HorizontalCard'
 import { usePlaylist } from '../../context/PlaylistContext'
 import '../../pages/WatchLater/WatchLater.css'
 
 const WatchLater = () => {
-    const { playlistState, playlistDispatch } = usePlaylist()
+    const { playlistState } = usePlaylist()
 
     const getWatchLater = () => {
         const playlist = playlistState.library.find(playlist => playlist.name === 'Watch Later')

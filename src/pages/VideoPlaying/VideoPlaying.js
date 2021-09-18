@@ -17,12 +17,10 @@ const VideoPlaying = () => {
     const navigate = useNavigate()
     const [video, setVideo] = useState({})
     const { state, dispatch } = useVideo()
-    const { authState, authDispatch } = useAuth()
+    const { authState } = useAuth()
     const { playlistState, playlistDispatch } = usePlaylist()
     const [note, setNote] = useState('')
     const videoRef = useRef()
-
-    // console.log(authState)
 
     useEffect(() => {
         getVideo()
@@ -129,7 +127,7 @@ const VideoPlaying = () => {
 
                     <div className='img-desc'>
                         <div className='channel-img'>
-                            <img src={video.channelImage} alt="image" />
+                            <img src={video.channelImage} alt="img" />
                             <span>{video.channelName}</span>
                         </div>
                         <button className='description-btn' onClick={() => toggleDescription()}>Description</button>
@@ -145,8 +143,10 @@ const VideoPlaying = () => {
             <div className='note-taking-container'>
                 <h2>Take notes</h2>
                 <div className='text-input'>
-                    <input type="text" value={note} onChange={(e) => setNote(e.target.value)} />
-                    <IoIosAddCircleOutline className='icon' onClick={() => addToNotesHandler(id)} />
+                    <input type="text" value={note} onChange={(e) => setNote(e.target.value)} disabled={state.isLoggedIn ? '' : 'disabled'} />
+                    <button onClick={() => addToNotesHandler(id)} disabled={state.isLoggedIn ? '' : 'disabled'}>
+                        <IoIosAddCircleOutline className='icon' />
+                    </button>
                 </div>
 
                 <div className="allNotes">

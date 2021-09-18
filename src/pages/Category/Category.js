@@ -3,7 +3,6 @@ import '../Category/Category.css'
 import CategoryCard from '../../components/CategoryCard/CategoryCard'
 import { Link } from 'react-router-dom'
 import { networkCall } from '../../utils/networkCall'
-import { GiCondyluraSkull } from 'react-icons/gi'
 import { useVideo } from '../../context/VideoContext'
 
 const Category = () => {
@@ -23,7 +22,7 @@ const Category = () => {
 
     }, []);
 
-    const setCategory = async (event, categoryID) => {
+    const setCategory = async (categoryID) => {
         dispatch({ type: 'SET_CURRENT_CATEGORY', payload: categoryID })
         localStorage.setItem('Category', categoryID)
     }
@@ -36,7 +35,8 @@ const Category = () => {
 
                 {state.categories.map((category) => {
                     return (
-                        <Link to='/videos' key={category._id} onClick={(e) => setCategory(e, category._id)}>
+                        <Link to='/videos' key={category._id} onClick={() => setCategory(category._id)
+                        }>
                             <CategoryCard image={category.image} title={category.name} />
                         </Link>)
                 })}

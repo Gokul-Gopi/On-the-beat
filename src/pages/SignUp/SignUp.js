@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../SignUp/SignUp.css'
-import Navbar from '../../components/Header/Header'
 import { useAuth } from '../../context/AuthContext'
 import { useNavigate, Link } from 'react-router-dom'
 import { FaRegUserCircle } from 'react-icons/fa'
@@ -25,11 +24,8 @@ const SignUp = () => {
         confirmPwd: ''
     })
 
-    // const [showPwd, setShowPwd] = useState(false)
-
     const validateForm = () => {
         let validator = true
-        // setShowPwd(false)
         const { eMail, pwd, confirmPwd } = userDetails
 
         const eMailValidator = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
@@ -77,6 +73,7 @@ const SignUp = () => {
         <div className='signup'>
 
             <div className="signup-container">
+                <div className='heading'><h2>On the beat!</h2></div>
                 <form>
                     <div className='form-inputs'>
                         <FaRegUserCircle />
@@ -85,7 +82,7 @@ const SignUp = () => {
 
                     <div className='form-inputs'>
                         <FaRegUserCircle />
-                        <input type="text" placeholder='Optional' value={userDetails.lastName} placeholder='Lastname' onChange={(e) => setuserDetails(preValue => ({ ...preValue, lastName: e.target.value }))} />
+                        <input type="text" value={userDetails.lastName} placeholder='Lastname' onChange={(e) => setuserDetails(preValue => ({ ...preValue, lastName: e.target.value }))} />
                     </div>
 
                     <div className='form-inputs'>

@@ -3,13 +3,24 @@ import './Header.css'
 import { GiGuitarBassHead } from 'react-icons/gi'
 import { FaUserCircle } from 'react-icons/fa'
 import { FaSearch } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 
 
 const Navbar = () => {
+    const { authState, authDispatch } = useAuth()
+    const navigate = useNavigate()
 
-    const { authState } = useAuth()
+    const onClickHandler = () => {
+        if (authState.isLoggedIn) {
+            localStorage.removeItem('userDetails')
+            authDispatch({ type: 'RESET_USER' })
+            window.location.reload()
+        } else {
+            navigate('/login')
+        }
+    }
+
     return (
         <nav className='navbar'>
 
@@ -23,14 +34,14 @@ const Navbar = () => {
                 <div className='search-icon-container'><FaSearch className='search-icon' /></div>
             </div>
 
-            {authState.isLoggedIn
-                ? <span className='user-greeting'>
-                    Hey {authState.currentUserName}!
-                </span>
-                : <Link to='/login' className='nav-link'>
-                    <FaUserCircle className='user-icon' />
-                </Link>
-            }
+            <div className='user-name'>
+                <FaUserCircle className='user-icon' onClick={() => onClickHandler()} />
+                {authState.isLoggedIn
+                    ? <span>{authState.currentUserName}</span>
+                    : <span>User</span>
+                }
+            </div>
+
 
 
         </nav>

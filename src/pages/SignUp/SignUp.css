@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 84vh;
+    min-height: 84vh;
 }
 
 .signup-container{
@@ -11,6 +11,21 @@
     box-shadow: 1px 1px 3px rgba(124, 58, 237, 0.61);
     border-radius: 5px;
     padding: 1.4rem;
+}
+
+.signup-container .heading{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.signup-container .heading h2{
+    font-weight: normal;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 auto;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .signup-container .error{
@@ -62,4 +77,8 @@
 
 .signup-container .sign-up-btn span{
     margin-top: 0.7rem;
+}
+
+.signup-container .sign-up-btn span strong{
+    color: var(--primary-color);
 }

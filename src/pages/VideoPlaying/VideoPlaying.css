@@ -4,13 +4,8 @@
 }
 
 .video-player-container{
-    /* border: 5px solid black; */
     width: 66%;
 }
-
-/* .channel-details{
-    border: 1px solid black;
-} */
 
 .channel-details .title{
     font-size: 1.5rem;
@@ -128,6 +123,11 @@
     font-size: 1.1rem;
 }
 
+.note-taking-container .text-input button{
+   background: transparent;
+   border: none;
+}
+
 .note-taking-container .text-input .icon{
     font-size: 2.5rem;
     margin-left: 5px;
@@ -157,10 +157,6 @@
     border-radius: 10px;
 }
   
-/* .allNotes::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color); 
-} */
-
 .notes-info{
     padding: 1rem;
     border-radius: 7px;

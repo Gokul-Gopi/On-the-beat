@@ -3,10 +3,8 @@ import { useEffect } from "react";
 import LandingPage from './pages/LandingPage/LandingPage';
 import { Routes, Route } from 'react-router-dom';
 import Category from './pages/Category/Category';
-import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp/SignUp'
 import Navbar from "./components/Header/Header";
-import Sidebar from './components/Navbar/Navbar';
 import { useMatch } from "react-router-dom";
 import { displayNavbarAndSidebar } from './utils/components';
 import VideoListing from './pages/VideoListing/VideoListing';
@@ -23,19 +21,18 @@ import PrivateRoutes from './components/PrivateRoutes';
 
 function App() {
   const { authState } = useAuth()
-  const { state, dispatch } = useVideo()
-  const { playlistState, playlistDispatch } = usePlaylist()
+  const { dispatch } = useVideo()
+  const { playlistDispatch } = usePlaylist()
   const landingPageURL = useMatch('/');
   const categoryPageURL = useMatch('/category');
   defaultHeaderForToken(authState.currentUserToken)
-
-  // console.log(playlistState)
 
   useEffect(() => {
     if (authState.isLoggedIn) {
       getNotes() && getPlaylist()
     }
   }, [authState.currentUserToken])
+
 
   const getPlaylist = async () => {
     const response = await networkCall('/playlist', "GET")
@@ -64,7 +61,6 @@ function App() {
         <Route path='videos' element={<VideoListing />} />
         <Route path='signup' element={<SignUp />} />
         <Route path='login' element={<Login />} />
-        <Route path='home' element={<Home />} />
         <Route path='category' element={<Category />} />
         <Route path='/' element={<LandingPage />} />
       </Routes>

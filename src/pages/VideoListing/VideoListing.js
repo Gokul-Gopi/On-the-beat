@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import '../VideoListing/VideoListing.css'
 import VideoCard from '../../components/VideoCard/VideoCard'
 import { useVideo } from '../../context/VideoContext'
-import { usePlaylist } from '../../context/PlaylistContext'
 import { networkCall } from '../../utils/networkCall'
 import Sidebar from '../../components/Navbar/Navbar'
 import { Link } from 'react-router-dom'
@@ -10,7 +9,6 @@ import Modal from '../../components/Modal/Modal'
 
 const VideoListing = () => {
     const { state, dispatch } = useVideo();
-    const { playlistState, playlistDispatch } = usePlaylist()
 
     useEffect(() => {
         let category = localStorage.getItem('Category')
@@ -23,7 +21,6 @@ const VideoListing = () => {
         getVideos()
 
     }, [])
-
 
 
     return (

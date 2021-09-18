@@ -11,7 +11,7 @@ const networkCall = async (route, method, data) => {
                     url: `${Backend}${route}`,
                 })
             } catch (err) {
-                console.log(`Error: ${err.message}`);
+                return err.message
             }
 
 

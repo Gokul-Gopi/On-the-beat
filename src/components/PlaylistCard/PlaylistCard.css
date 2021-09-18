@@ -77,6 +77,7 @@
 .playlist-card .playlist-options span{
     font-size: 1.1rem;
     font-weight: 600;
+    color: var(--primary-color);
 }
 
 .playlist-card .playlist-options .btns{
@@ -89,4 +90,5 @@
     font-size: 1.5rem;
     cursor: pointer;
     margin-right: 10px;
+    color: var(--primary-color);
 }

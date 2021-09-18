@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../Login/Login.css'
-import { AiOutlineEye } from 'react-icons/ai'
 import { Link } from "react-router-dom"
 import { useAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
@@ -18,7 +17,7 @@ const Login = () => {
 
     const loginUser = async () => {
         const response = await loginHandler(userCredentials);
-        if (response.status == 200) {
+        if (response.status === 200) {
             setUserCredentials({ email: '', password: '' });
             navigate('/');
         }

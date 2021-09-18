@@ -28,6 +28,21 @@ body{
   background-color: var(--white-100);
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body
+  ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color); 
+  border-radius: 10px;
+}
+
 a{
   text-decoration: none;
   color: inherit;

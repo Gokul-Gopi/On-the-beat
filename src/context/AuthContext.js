@@ -28,7 +28,6 @@ const AuthProvider = ({ children }) => {
         user?.token && authDispatch({ type: 'SET_USER_TOKEN', payload: user.token })
     }, [])
 
-
     const signUpHandler = async (userDetails) => {
         const response = await networkCall('/user/signup', 'POST', userDetails);
         if (response.status === 201) {

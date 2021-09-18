@@ -6,7 +6,7 @@ import Sidebar from '../../components/Navbar/Navbar'
 import { Link } from 'react-router-dom'
 
 const Library = () => {
-    const { playlistState, playlistDispatch } = usePlaylist()
+    const { playlistState } = usePlaylist()
 
     return (
         <div className='library'>
