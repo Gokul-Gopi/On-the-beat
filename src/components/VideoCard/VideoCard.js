@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../VideoCard/VideoCard.css'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { useVideo } from '../../context/VideoContext'
 import Option from './Option'
-import { usePlaylist } from '../../context/PlaylistContext'
 
 const VideoCard = (props) => {
     const { state, dispatch } = useVideo()
-    const { playlistState, playlistDispatch } = usePlaylist()
-
-    // console.log(playlistState)
 
     const handlerMoreOptions = (event) => {
         event.preventDefault()

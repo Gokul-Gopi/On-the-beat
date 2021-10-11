@@ -8,7 +8,8 @@ const updateChangesInPlaylist = (library, playlist) => {
 }
 
 const findPlaylistVideos = (library, playlistID) => {
-    return library.find(playlist => playlist?._id === playlistID)?.videos
+    const playlist = library.find(playlist => playlist?._id === playlistID)
+    return { name: playlist?.name, videos: playlist?.videos }
 }
 
 

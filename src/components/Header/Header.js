@@ -15,6 +15,7 @@ const Navbar = () => {
         if (authState.isLoggedIn) {
             localStorage.removeItem('userDetails')
             authDispatch({ type: 'RESET_USER' })
+            navigate('/videos')
             window.location.reload()
         } else {
             navigate('/login')

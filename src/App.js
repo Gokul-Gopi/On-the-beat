@@ -18,6 +18,9 @@ import Library from './pages/Library/Library';
 import WatchLater from './pages/WatchLater/WatchLater';
 import StackedList from './components/StackedList/StackedList';
 import PrivateRoutes from './components/PrivateRoutes';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+toast.configure()
 
 function App() {
   const { authState } = useAuth()

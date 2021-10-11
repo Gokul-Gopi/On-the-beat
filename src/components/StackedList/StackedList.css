@@ -1,8 +1,28 @@
 .stacked-list{
     display: flex;
-    align-items: center;
 }
 
-.stacked-list .list-of-videos{
-    align-self: flex-start;
+.stacked-list .stacked-list-details{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 0.8rem 0;
+}
+
+.stacked-list .list-of-videos .list-options{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.stacked-list .list-of-videos .list-options button{
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border: none;
+    margin-right: 1rem;
+    height: 3rem;
+    width: 15rem;
+    border-radius: 5px;
 }

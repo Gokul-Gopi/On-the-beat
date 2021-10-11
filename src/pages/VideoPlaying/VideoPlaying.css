@@ -69,23 +69,28 @@
 }
 
 .channel-details .description-btn{
-    padding: 0.4rem 0.4rem;
+    padding: 0.5rem;
     border-radius: 5px;
-    border: 2px solid var(--primary-color);
+    border: none;
     cursor: pointer;
     background: transparent;
-    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.2s;
 }
 
-.description-btn::after{
-    content: '\25be';
-    float: right;
-    transform: scale(1.4);
+.channel-details .description-btn:hover{
+    transform: translateY(-3px);
 }
 
-.description-btn--active::after{
-    content: '\25b4';
+.channel-details .description-btn:active{
+    transform: translateY(0px);
 }
+
 
 .channel-description{
     overflow: hidden;

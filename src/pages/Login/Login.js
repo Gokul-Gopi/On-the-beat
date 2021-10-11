@@ -5,6 +5,7 @@ import { useAuth } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import { FiMail } from 'react-icons/fi'
 import { RiLockPasswordLine } from 'react-icons/ri'
+import callToastify from '../../components/Toast/toast'
 
 const Login = () => {
     const navigate = useNavigate()
@@ -19,7 +20,8 @@ const Login = () => {
         const response = await loginHandler(userCredentials);
         if (response.status === 200) {
             setUserCredentials({ email: '', password: '' });
-            navigate('/');
+            navigate('/videos');
+            callToastify('Successfully logged in!', true)
         }
         else {
             setInvalidCredentials('Invalid email or passoword')

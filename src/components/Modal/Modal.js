@@ -5,6 +5,7 @@ import { IoMdClose } from 'react-icons/io'
 import { useVideo } from '../../context/VideoContext'
 import { usePlaylist } from '../../context/PlaylistContext'
 import { networkCall } from '../../utils/networkCall'
+import callToastify from '../Toast/toast'
 
 const Modal = (props) => {
     const [createNewPlaylist, setCreateNewPlaylist] = useState(false)
@@ -33,12 +34,14 @@ const Modal = (props) => {
             const response = await networkCall(`/playlist/${playlistID}/${props.videoID}`, "DELETE")
             if (response.status === 200) {
                 playlistDispatch({ type: 'DELETE_VIDEO_FROM_PLAYLIST', payload: response.data.playlist })
+                callToastify('Deleted video from playlist', true)
             }
 
         } else {
             const repsonse = await networkCall(`/playlist/${playlistID}/${props.videoID}`, "POST")
             if (repsonse.data.success) {
                 playlistDispatch({ type: 'ADD_VIDEO_TO_PLAYLIST', payload: repsonse.data.playlist })
+                callToastify('Added video to playlist', true)
             }
         }
     }

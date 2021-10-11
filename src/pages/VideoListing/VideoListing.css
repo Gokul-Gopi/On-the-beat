@@ -3,7 +3,7 @@
 }
 
 .video-listing-container{
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem 4rem;

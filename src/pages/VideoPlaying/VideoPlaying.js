@@ -26,7 +26,6 @@ const VideoPlaying = () => {
         getVideo()
     }, [])
 
-
     const getVideo = async () => {
         const response = await networkCall(`/video/${id}`, "GET")
         if (response.status === 200) {
@@ -143,8 +142,8 @@ const VideoPlaying = () => {
             <div className='note-taking-container'>
                 <h2>Take notes</h2>
                 <div className='text-input'>
-                    <input type="text" value={note} onChange={(e) => setNote(e.target.value)} disabled={state.isLoggedIn ? '' : 'disabled'} />
-                    <button onClick={() => addToNotesHandler(id)} disabled={state.isLoggedIn ? '' : 'disabled'}>
+                    <input type="text" value={note} onChange={(e) => setNote(e.target.value)} disabled={authState.isLoggedIn ? null : 'disabled'} />
+                    <button onClick={() => addToNotesHandler(id)} disabled={authState.isLoggedIn ? '' : 'disabled'}>
                         <IoIosAddCircleOutline className='icon' />
                     </button>
                 </div>

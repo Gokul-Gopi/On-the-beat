@@ -44,10 +44,10 @@ const PlaylistCard = ({ playlist }) => {
 
             <div className="playlist-options">
                 <span className='playlist-name'>{playlist.name}</span>
-                <div className='btns'>
+                {/* <div className='btns'>
                     <button onClick={(e) => editPlaylistName(e, playlist._id)}><AiOutlineEdit /></button>
                     <button onClick={(e) => deletePlaylist(e, playlist._id,)}><RiDeleteBin4Line /></button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -20,9 +20,9 @@
 }
 
 .sidebar-link span{
-    font-weight: 700;
     color: var(--primary-color);
     text-align: center;
+    font-weight: bold;
 }
 
 .sidebar-link .icon{

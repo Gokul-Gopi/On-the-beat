@@ -1,6 +1,7 @@
 import React from 'react'
 import { usePlaylist } from '../../context/PlaylistContext'
 import { networkCall } from '../../utils/networkCall'
+import { IoIosRemoveCircle } from 'react-icons/io'
 import '../StackedList/HorizontalCard.css'
 
 const HorizontalCard = ({ video, playlistID }) => {
@@ -28,7 +29,7 @@ const HorizontalCard = ({ video, playlistID }) => {
                     {/* <span className='length'>video length</span> */}
                 </div>
 
-                <button className="remove-video-btn" onClick={(e) => removeVideoFromPlaylist(e)}>Remove</button>
+                <button className="remove-video-btn" onClick={(e) => removeVideoFromPlaylist(e)}><IoIosRemoveCircle /> Remove</button>
             </div>
         </div>
     )

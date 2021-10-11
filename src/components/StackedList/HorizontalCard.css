@@ -1,6 +1,5 @@
 .horizontal-card{
     display: flex;
-    width: 100%;
     margin: 1.2rem;
 }
 
@@ -34,12 +33,10 @@
 }
 
 .video-info .remove-video-btn {
-    padding: 0.4rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     align-self: flex-start;
     background: transparent;
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
     cursor: pointer;
+    border: none;
 }
