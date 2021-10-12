@@ -26,7 +26,7 @@ const Option = (props) => {
             dispatch({ type: 'SET_SHOW_OPTIONS', payload: '' })
             if (response.data.success) {
                 playlistDispatch({ type: 'ADD_VIDEO_TO_PLAYLIST', payload: response.data.playlist })
-                callToastify('Video added to playlist', true)
+                callToastify('Video added to watch later', true)
             }
             else {
                 callToastify('Already in watch later', false)

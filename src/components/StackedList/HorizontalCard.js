@@ -29,7 +29,7 @@ const HorizontalCard = ({ video, playlistID }) => {
                     {/* <span className='length'>video length</span> */}
                 </div>
 
-                <button className="remove-video-btn" onClick={(e) => removeVideoFromPlaylist(e)}><IoIosRemoveCircle /> Remove</button>
+                <button className="remove-video-btn" onClick={(e) => removeVideoFromPlaylist(e)}><IoIosRemoveCircle />Remove</button>
             </div>
         </div>
     )

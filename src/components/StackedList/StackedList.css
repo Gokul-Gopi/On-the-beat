@@ -11,11 +11,15 @@
 }
 
 .stacked-list .list-of-videos .list-options{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 1rem 0;
 }
 
 .stacked-list .list-of-videos .list-options button{
+    display: flex;
+    align-items: center;
     background: var(--primary-color);
     color: white;
     font-weight: bold;
@@ -23,6 +27,6 @@
     border: none;
     margin-right: 1rem;
     height: 3rem;
-    width: 15rem;
     border-radius: 5px;
+    padding: 0.5rem 1rem;
 }
