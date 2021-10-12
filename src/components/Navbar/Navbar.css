@@ -1,7 +1,7 @@
 .sidebar{
     position: relative;
     display: inline-block;
-    border-right: 1px solid rgb(189, 189, 189);
+    border-right: 1px solid rgb(66, 66, 66);
     width: 5%;
     min-height: 100vh;
     padding: 0 1rem;

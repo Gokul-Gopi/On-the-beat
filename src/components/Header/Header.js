@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './Header.css'
 import { GiGuitarBassHead } from 'react-icons/gi'
 import { FaUserCircle } from 'react-icons/fa'
 import { FaSearch } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
+import { useVideo } from '../../context/VideoContext'
 
 
 const Navbar = () => {
     const { authState, authDispatch } = useAuth()
+    const { state } = useVideo()
     const navigate = useNavigate()
+    const inputRef = useRef('')
+    const [searchSuggestion, setSearchSuggestion] = useState({
+        suggestionBox: false,
+        list: []
+    })
 
     const onClickHandler = () => {
         if (authState.isLoggedIn) {
@@ -22,17 +29,43 @@ const Navbar = () => {
         }
     }
 
+    const searchVideos = (searchInput) => {
+        if (searchInput.length !== 0) {
+            const searchResults = state.video.filter(video => {
+                return video.name.toLowerCase().includes(searchInput.toLowerCase())
+            })
+            setSearchSuggestion({ suggestionBox: true, list: searchResults })
+
+        } else {
+            setSearchSuggestion({ suggestionBox: false, list: [] })
+        }
+    }
+
+    const navigateToVideo = (id) => {
+        inputRef.current.value = ''
+        navigate(`/videos/${id}`)
+        setSearchSuggestion({ suggestionBox: false, list: [] })
+    }
+
     return (
         <nav className='navbar'>
-
             <Link to='/' className='header'>
                 <GiGuitarBassHead className='header-icon' />
                 <h2>On the beat!</h2>
             </Link>
 
             <div className='search-bar'>
-                <input type="search" placeholder='Search' />
-                <div className='search-icon-container'><FaSearch className='search-icon' /></div>
+                <input type="search" placeholder='Search in category' ref={inputRef} onChange={(e) => searchVideos(e.target.value)} />
+                {searchSuggestion.suggestionBox
+                    ? <div className="search-suggestions">
+                        {searchSuggestion.list.map(item => {
+                            return (
+                                <span className='list-item' onClick={() => navigateToVideo(item._id)}>{item.name}</span>
+                            )
+                        })}
+                    </div>
+                    : null
+                }
             </div>
 
             <div className='user-name'>

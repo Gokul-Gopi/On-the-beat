@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700;800&display=swap');
 
 :root{
-  --primary-color:#7C3AED;
-  /* --primary-bg:#292929; */
-   /* --primary-color:#1E293B;  */
-   /* --primary-color:#FCD34D; */
+  /* --primary-color:#7C3AED; */
+  /* --primary-color:#9159f0; */
+  --primary-color:#ff88b3;
 
+  
+  /* --primary-bg:#121E36; */
+  /* --primary-bg:#271236; */
+  /* --primary-bg:#280E2A; */
+  --primary-bg:#181c2c;
 }
 
 .App {
@@ -27,6 +31,7 @@ body{
   width: 100%;
   font-family: 'Roboto', sans-serif;
   background-color:rgb(252, 252, 252);
+  background-color: var(--primary-bg);
 }
 
 body::-webkit-scrollbar {

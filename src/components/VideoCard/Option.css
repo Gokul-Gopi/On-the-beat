@@ -7,6 +7,7 @@
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     padding: 0.5rem;
     width: 10rem;
+    border: 2px solid var(--primary-color);
 }
 
 .option div:nth-child(1){
@@ -16,16 +17,23 @@
 .option button{
     background: transparent;
     border: none;
-    color: grey;
+    color: rgb(185, 185, 185);
     text-align: left;
     width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: black;
 }
 
 .option button:hover{
     color: black;
+    font-weight: bold;
 }
 
 .option .icon{
     margin-top: 3px;
     margin-right: 3px;
+    font-size: 1rem;
+    margin-right: 5px;
 }

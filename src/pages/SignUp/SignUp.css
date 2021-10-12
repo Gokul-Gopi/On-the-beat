@@ -8,7 +8,7 @@
 
 .signup-container{
     display: inline-block;
-    box-shadow: 1px 1px 3px rgba(124, 58, 237, 0.61);
+    box-shadow: 1px 0px 5px 1px rgba(255, 136, 179,0.6);
     border-radius: 5px;
     padding: 1.4rem;
 }
@@ -40,6 +40,8 @@
     border-radius: 5px;
     border: 1px solid rgb(194, 194, 194);
     padding: 0 0.5rem;
+    background-color: white;
+    color: var(--primary-color);
 }
 
 .signup-container div{
@@ -73,12 +75,15 @@
     background-color: var(--primary-color);
     color: white;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .signup-container .sign-up-btn span{
     margin-top: 0.7rem;
+    color: white;
 }
 
 .signup-container .sign-up-btn span strong{
     color: var(--primary-color);
+    margin-left: 5px;
 }

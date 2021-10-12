@@ -43,7 +43,7 @@ const Login = () => {
 
                 <div className='login-inputs'>
                     <RiLockPasswordLine className='icon password-icon' />
-                    <input type="text" placeholder='password' value={userCredentials.password} onChange={(e) => {
+                    <input type="password" placeholder='password' value={userCredentials.password} onChange={(e) => {
                         setUserCredentials(prevalue => ({ ...prevalue, password: e.target.value }))
                     }} />
                 </div>

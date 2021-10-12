@@ -11,6 +11,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 10px;
+    color: white;
 }
 
 .other-details{
@@ -18,9 +19,8 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.1rem;
-    color: #6B7280;
+    color: #8b8f97;
     margin-bottom: 1rem;
-    /* border: 1px solid black; */
 }
 
 .other-details .views-date{
@@ -38,7 +38,7 @@
    cursor: pointer;
    border: none;
    background: transparent;
-   color: #6B7280;
+   color: #8b8f97;
 }
 
 .channel-img{
@@ -66,6 +66,7 @@
 .channel-img span{
     font-weight: 500;
     font-size: 1.1rem;
+    color: white;
 }
 
 .channel-details .description-btn{
@@ -84,18 +85,16 @@
 }
 
 .channel-details .description-btn:hover{
-    transform: translateY(-3px);
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
-
-.channel-details .description-btn:active{
-    transform: translateY(0px);
-}
-
 
 .channel-description{
     overflow: hidden;
     max-height: 0;
     transition: all 0.4s;
+    color: white;
 }
 
 .channel-details .channel-description{
@@ -104,7 +103,7 @@
 
 .note-taking-container{
     padding: 1rem 1.2rem;
-    box-shadow: -1px -1px 9px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgb(255 136 179);;
     height: 700px;
     width: 34%;
     margin-left: 2rem;
@@ -113,6 +112,7 @@
 .note-taking-container h2{
     text-align: center;
     font-weight: lighter;
+    color: white;
 }
 
 .note-taking-container .text-input{
@@ -128,9 +128,14 @@
     font-size: 1.1rem;
 }
 
+.note-taking-container .text-input input:focus{
+    outline: none;
+}
+
 .note-taking-container .text-input button{
    background: transparent;
    border: none;
+   color: white;
 }
 
 .note-taking-container .text-input .icon{
