@@ -108,6 +108,7 @@ const VideoPlaying = () => {
           url={`https://www.youtube.com/embed/${video.videoID}`}
           ref={videoRef}
           width="100%"
+          height="480px"
           config={{
             youtube: {
               playerVars: { showinfo: 1 },
