@@ -51,7 +51,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="header">
         <GiGuitarBassHead className="header-icon" />
-        <h2>On the beat!</h2>
+        <h2 className="header-title">On the beat!</h2>
       </Link>
 
       <div className="search-bar">

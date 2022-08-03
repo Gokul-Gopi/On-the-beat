@@ -1,77 +1,87 @@
-.login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 88vh;
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
 }
 
-.login-container{
-    box-shadow: 1px 0px 5px 1px rgba(255, 136, 179,0.6);
-    padding: 1rem 1.2rem;
-    border-radius: 5px;
+.login-container {
+  box-shadow: 1px 0px 5px 1px rgba(255, 136, 179, 0.6);
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
 }
 
-.login-container .heading{
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.login-container .heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.login-container input{
-    height: 45px;
-    width: 400px;
-    font-size: 1.2rem;
-    padding: 0.7rem;
+.login-container input {
+  height: 45px;
+  width: 400px;
+  font-size: 1.2rem;
+  padding: 0.7rem;
 }
 
-.login-inputs{
-    display: flex;
-    align-items: center;
-    border: 1px solid rgb(194, 194, 194);
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    padding: 0 1rem;
-    background-color: white;
+.login-inputs {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  background-color: white;
 }
 
-.login-inputs input{
-    border: none;
+.login-inputs input {
+  border: none;
 }
 
-.login-inputs input:focus{
-    outline: none;
+.login-inputs input:focus {
+  outline: none;
 }
 
-.login-inputs .icon{
-    font-size: 1.2rem;
-    color: var(--primary-color);
+.login-inputs .icon {
+  font-size: 1.2rem;
+  color: var(--primary-color);
 }
 
-.login-container .login-btn{
-    text-align: center;
+.login-container .login-btn {
+  text-align: center;
 }
 
-.login-container .login-btn button{
-    width: 40%;
-    height: 2rem;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    border: none;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 1rem 0;
-    cursor: pointer;
+.login-container .login-btn button {
+  width: 40%;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
-.login-container .signup-link{
-    text-align: center;
-    color: white;
+.login-container .signup-link {
+  text-align: center;
+  color: white;
 }
 
-.login-container .signup-link strong{
-    color: var(--primary-color);
+.login-container .signup-link strong {
+  color: var(--primary-color);
+}
+
+@media (max-width: 650px) {
+  .login-container {
+    width: 90%;
+  }
+
+  .login {
+    height: 70vh;
+  }
 }
