@@ -1,110 +1,118 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); */
-    border-bottom: 1px solid rgb(66, 66, 66);
-    padding: 0.6rem 2rem;
+.navbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(66, 66, 66);
+  padding: 0.6rem 2rem;
 }
 
-.header{
-    display: flex;
-    font-size: 1.5rem;
-    align-items: center;
-    margin-right: auto;
-    color: var(--primary-color);
-    text-decoration: none;
-}   
-
-.header .header-icon{
-    transform: scale(2);
-    margin-right: 10px;
+.header {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-right: auto;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-.search-bar{
-    position: relative;
-    width: 50rem;
-    border-radius: 5px;
-    margin: 0 auto;
+.header .header-icon {
+  transform: scale(2);
+  margin-right: 10px;
 }
 
-.search-bar input{
-    height: 40px;
-    width: 100%;
-    font-size: 1.1rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 5px;
-    border: none;
+.search-bar {
+  position: relative;
+  width: 50rem;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-right: 0.8rem;
 }
 
-.search-bar input:focus{
-    outline: none;
+.search-bar input {
+  height: 40px;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  border: none;
 }
 
-/* .search-bar .search-icon{
-    position: absolute;
-    top: 25%;
-    right: 2%;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-} */
-
-.search-bar .search-suggestions{
-    position: absolute;
-    z-index: 2;
-    background-color: rgb(240, 222, 237);
-    top: 99%;
-    right: 0;
-    width: 50rem;
-    display: flex;
-    flex-direction: column;
+.search-bar input:focus {
+  outline: none;
 }
 
-.search-bar .search-suggestions .list-item{
-    border-bottom: 1px solid rgb(204, 204, 204);
-    padding: 0.3rem 0.5rem;
-    color: black;
+.search-bar .search-suggestions {
+  position: absolute;
+  z-index: 2;
+  background-color: rgb(240, 222, 237);
+  top: 99%;
+  right: 0;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.search-bar .search-suggestions .list-item:hover{
-    color: var(--primary-color);
-    font-weight: bold;
-    cursor: pointer;
+.search-bar .search-suggestions .list-item {
+  border-bottom: 1px solid rgb(204, 204, 204);
+  padding: 0.3rem 0.5rem;
+  color: black;
 }
 
-.search-icon-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    height: 40px;
-    width: 7%;
+.search-bar .search-suggestions .list-item:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.nav-link{
-    margin-left: auto;
-    margin-right: 15px;
+.search-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  height: 40px;
+  width: 7%;
 }
 
-.nav-link .user-icon{
-    transform: scale(1.9);
-    color: var(--primary-color);
+.nav-link {
+  margin-left: auto;
+  margin-right: 15px;
 }
 
-.navbar .user-name{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 1rem;
+.nav-link .user-icon {
+  transform: scale(1.9);
+  color: var(--primary-color);
 }
 
-.navbar .user-icon{
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    cursor: pointer;
+.navbar .user-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
 }
 
-.navbar span{
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--primary-color);
+.navbar .user-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.navbar span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .search-bar {
+    width: 30rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+  .header .header-title {
+    display: none;
+  }
+
+  .header .header-icon {
+    margin-right: 2rem;
+  }
 }

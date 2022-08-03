@@ -91,3 +91,13 @@
   color: var(--primary-color);
   margin-left: 5px;
 }
+
+@media (max-width: 650px) {
+  .signup-container {
+    width: 90%;
+  }
+
+  .signup {
+    min-height: 100vh;
+  }
+}
