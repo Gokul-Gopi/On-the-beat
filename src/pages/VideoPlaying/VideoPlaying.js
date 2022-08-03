@@ -194,10 +194,10 @@ const VideoPlaying = () => {
                       <button onClick={() => deleteNoteHandler(note._id)}>
                         <MdDelete />
                       </button>
-                      <button>
+                      {/* <button>
                         {" "}
                         <MdEdit />
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
